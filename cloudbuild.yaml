@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npx'
+  args: ['playwright', 'install', '--with-deps']
+- name: 'gcr.io/cloud-builders/npx'
+  args: ['playwright', 'test', '--browser=chromium', '--workers=2', '--headed', '--reporter=dot', '--timeout=60000', '--max-failures=0', '--retries=3', '--project=playwright', '--output=artifacts']
