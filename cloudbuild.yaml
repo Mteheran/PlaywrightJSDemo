@@ -6,4 +6,7 @@ steps:
   args: ['playwright', 'install', '--with-deps']
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: npx
+  args: ['playwright', 'install-deps']
+- name: 'gcr.io/cloud-builders/npm'
+  entrypoint: npx
   args: ['playwright', 'test',  '--timeout=60000',  '--retries=3']
