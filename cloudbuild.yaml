@@ -1,6 +1,6 @@
 steps:
 - name: 'debian'
-  args: ['sudo', 'apt', 'install', 'curl']
+  args: ['apt', 'install', 'curl']
 - name: 'debian'
   args: ['curl', '-sl', 'https://deb.nodesource.com/setup_6.x', '|', 'sudo', 'bash', '-']
 - name: 'debian'
