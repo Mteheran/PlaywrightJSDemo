@@ -1,9 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
-  id: 'Install npx'
-  args: ['install', '-g', 'npx']
 - name: 'gcr.io/cloud-builders/npx'
   args: ['playwright', 'install', '--with-deps']
 - name: 'gcr.io/cloud-builders/npx'
