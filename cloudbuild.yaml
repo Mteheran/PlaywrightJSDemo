@@ -1,12 +1,11 @@
 steps:
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
-  entrypoint: npx
-  args: ['playwright', 'install', '--with-deps']
-- name: 'gcr.io/cloud-builders/npm'
-  entrypoint: npx
-  args: ['playwright', 'install-deps']
-- name: 'gcr.io/cloud-builders/npm'
-  entrypoint: npx
-  args: ['playwright', 'test',  '--timeout=60000',  '--retries=3']
+- name: 'debian'
+  args: ['sudo', 'apt', 'install', 'nodejs']
+- name: 'debian'
+  args: ['npx', 'install']
+- name: 'debian'
+  args: ['npx', 'playwright', 'install', '--with-deps']
+- name: 'debian'
+  args: ['npx', 'playwright', 'install-deps']
+- name: 'debian'
+  args: ['npx', 'playwright', 'test',  '--timeout=60000',  '--retries=3']
