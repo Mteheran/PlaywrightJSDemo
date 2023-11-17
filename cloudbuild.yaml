@@ -1,6 +1,6 @@
 steps:
 - name: 'debian'
-  args: ['sudo', 'apt', 'install', 'nodejs']
+  args: ['apt', 'install', 'nodejs']
 - name: 'debian'
   args: ['npx', 'install']
 - name: 'debian'
