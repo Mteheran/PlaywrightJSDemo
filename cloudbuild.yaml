@@ -2,7 +2,7 @@ steps:
 - name: 'ubuntu'
   args: ['apt-get', 'update']
 - name: 'ubuntu'
-  args: ['apt-get', 'install', 'build-essential']
+  args: ['apt-get', '-y', 'install', 'build-essential']
 - name: 'ubuntu'
   args: ['apt', 'install', 'curl']
 - name: 'ubuntu'
