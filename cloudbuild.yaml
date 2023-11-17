@@ -2,13 +2,13 @@ steps:
 - name: 'ubuntu'
   args: ['apt-get', 'update']
 - name: 'ubuntu'
+  args: ['curl', '-sl', 'https://deb.nodesource.com/setup_6.x', '|', 'sudo', 'bash', '-']
+- name: 'ubuntu'
   args: ['npx', 'install']
 - name: 'ubuntu'
   args: ['apt-get', '-y', 'install', 'build-essential']
 - name: 'ubuntu'
   args: ['apt', 'install', 'curl']
-- name: 'ubuntu'
-  args: ['curl', '-sl', 'https://deb.nodesource.com/setup_6.x', '|', 'sudo', 'bash', '-']
 - name: 'ubuntu'
   args: ['sudo', 'apt-get', 'install', '-y', 'nodejs']
 - name: 'ubuntu'
