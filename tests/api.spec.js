@@ -18,7 +18,8 @@ test.afterAll(async ({ }) => {
 test('colombia internet domain', async () => {
     const infoColombia = await apiContext.get(`/api/v1/Country/Colombia`);
     expect(infoColombia.ok()).toBeTruthy();
-    const responseBody = await infoColombia.json()
+    const responseBody = await infoColombia.json();
+    console.log(responseBody);
     expect(responseBody).toHaveProperty("internetDomain", ".co")
 });
 
@@ -26,5 +27,6 @@ test('Regions of Colombia', async () => {
     const infoColombia = await apiContext.get(`/api/v1/Region`);
     expect(infoColombia.ok()).toBeTruthy();
     const responseBody = await infoColombia.json();
+    console.log(responseBody);
     expect(responseBody).toHaveLength(6);
 });
